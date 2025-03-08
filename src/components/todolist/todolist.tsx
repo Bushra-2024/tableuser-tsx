@@ -24,7 +24,7 @@ const Todolist = () => {
     },
     {
       id: 2,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7WiIwQLITwCra76m5zlasK7rrBZBZWJ3e7w&s",
       name: "Emily Smith",
       email: "emily.smith@example.com",
       city: "Bukhtar",
@@ -33,7 +33,7 @@ const Todolist = () => {
     },
     {
       id: 3,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAXHDWDsMtv9vnLd3Sm9DPnIw0a6X5ZhU5gQ&s",
       name: "Liam Brown",
       email: "liam.brown@example.com",
       city: "Khujand",
@@ -42,7 +42,7 @@ const Todolist = () => {
     },
     {
       id: 4,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7WiIwQLITwCra76m5zlasK7rrBZBZWJ3e7w&s",
       name: "Sophia White",
       email: "sophia.white@example.com",
       city: "Dushanbe",
@@ -51,7 +51,7 @@ const Todolist = () => {
     },
     {
       id: 5,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAXHDWDsMtv9vnLd3Sm9DPnIw0a6X5ZhU5gQ&s",
       name: "Noah Davis",
       email: "noah.davis@example.com",
       city: "Bukhtar",
@@ -60,7 +60,7 @@ const Todolist = () => {
     },
     {
       id: 6,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7WiIwQLITwCra76m5zlasK7rrBZBZWJ3e7w&s",
       name: "Olivia Wilson",
       email: "olivia.wilson@example.com",
       city: "Khujand",
@@ -69,7 +69,7 @@ const Todolist = () => {
     },
     {
       id: 7,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7WiIwQLITwCra76m5zlasK7rrBZBZWJ3e7w&s",
       name: "William Miller",
       email: "william.miller@example.com",
       city: "Dushanbe",
@@ -78,7 +78,7 @@ const Todolist = () => {
     },
     {
       id: 8,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAXHDWDsMtv9vnLd3Sm9DPnIw0a6X5ZhU5gQ&s",
       name: "Ava Taylor",
       email: "ava.taylor@example.com",
       city: "Bukhtar",
