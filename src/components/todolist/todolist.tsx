@@ -15,7 +15,7 @@ const Todolist = () => {
   const [data, setData] = useState<ITableUser[]>([
     {
       id: 1,
-      image: "src/assets/Avatar.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAXHDWDsMtv9vnLd3Sm9DPnIw0a6X5ZhU5gQ&s",
       name: "Jacob Jones",
       email: "jackson.graham@example.com",
       city: "Dushanbe",
