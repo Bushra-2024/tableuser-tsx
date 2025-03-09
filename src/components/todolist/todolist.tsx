@@ -1,7 +1,7 @@
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import BedtimeIcon from "@mui/icons-material/Bedtime";
 import SearchIcon from "@mui/icons-material/Search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ITableUser } from "./types";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -9,7 +9,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
-
+import '../../styles/global.css'
 const Todolist = () => {
   const [modalVisible, setModalVisible] = useState<boolean>(false);
   const [data, setData] = useState<ITableUser[]>([
@@ -197,6 +197,16 @@ const Todolist = () => {
   const handleSelectUser = (user: ITableUser) => {
     setSelectedCustomer(user);
   };
+  
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <div>
@@ -333,11 +343,12 @@ const Todolist = () => {
             + NEW
           </button>
           <div className="flex gap-5">
-            <button className="flex gap-1 border-gray-200 border p-[7px] rounded-sm">
+            <button   onClick={() => setTheme("light")} className="flex gap-1 border-gray-200 border p-[7px] rounded-sm">
               <WbSunnyIcon />
+              
               Light
             </button>
-            <button className="flex gap-1 border-gray-200 border p-[7px] rounded-sm">
+            <button  onClick={() => setTheme("dark")}  className="flex gap-1 border-gray-200 border p-[7px] rounded-sm">
               Dark
               <BedtimeIcon />
             </button>
@@ -352,19 +363,19 @@ const Todolist = () => {
             onChange={(e) => setStatusFilter(e.target.value)}
             className="border border-gray-300 p-1 px-4 rounded-md"
           >
-            <option>All status</option>
-            <option>Active</option>
-            <option>Inactive</option>
+            <option className="text-black">All status</option>
+            <option className="text-black">Active</option>
+            <option className="text-black">Inactive</option>
           </select>
           <select
             value={cityFilter}
             onChange={(e) => setCityFilter(e.target.value)}
             className="border border-gray-300 p-1 px-4 rounded-md"
           >
-            <option>All cities</option>
-            <option>Dushanbe</option>
-            <option>Bukhtar</option>
-            <option>Khujand</option>
+            <option className="text-black">All cities</option>
+            <option className="text-black">Dushanbe</option>
+            <option className="text-black">Bukhtar</option>
+            <option className="text-black">Khujand</option>
           </select>
         </div>
         <div className="flex items-center border p-[3px] rounded-sm border-gray-300">
@@ -377,7 +388,7 @@ const Todolist = () => {
           <SearchIcon />
         </div>
       </div>
-
+      
       <table className="w-[75%] mt-10 m-auto">
         <thead>
           <tr className="border-b pb-2 border-gray-400">
@@ -458,7 +469,7 @@ const Todolist = () => {
       )}
 
       {profileModalVisible && (
-        <div className="fixed top-0 right-0 h-full w-[30%] bg-white shadow-lg p-6 border-l z-50">
+        <div className="fixed top-0 right-0 h-full w-[30%] bg-white shadow-lg p-6 border-l z-50 text-black">
           <div className="flex justify-between">
             <button onClick={closeProfileModal} className="text-xl">
               ✖
